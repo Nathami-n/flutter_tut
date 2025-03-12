@@ -1,13 +1,19 @@
 import 'package:e_commerce/common/styles/spacing_styles.dart';
-import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.subTitle,
+      required this.onPressed});
 
+  final String image, title, subTitle;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,18 +23,17 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               Image(
-                image: const AssetImage(
-                  TImages.staticSuccessIllustration,
+                image: AssetImage(
+                  image,
                 ),
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
-
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
               // title and subtitle
               Text(
-                TTexts.yourAccountCreatedTitle,
+                title,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
@@ -36,7 +41,7 @@ class SuccessScreen extends StatelessWidget {
                 height: TSizes.spaceBtwItems,
               ),
               Text(
-                TTexts.yourAccountCreatedSubTitle,
+                subTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
@@ -44,13 +49,11 @@ class SuccessScreen extends StatelessWidget {
               const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
-
               //buttons
-
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: onPressed,
                   child: const Text(TTexts.tContinue),
                 ),
               ),
