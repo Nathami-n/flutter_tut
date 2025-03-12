@@ -5,6 +5,7 @@ class TChipTheme {
   TChipTheme._();
 
   static ChipThemeData lightChipTheme = ChipThemeData(
+    // ignore: deprecated_member_use
     disabledColor: TColors.grey.withOpacity(0.4),
     labelStyle: const TextStyle(color: TColors.black),
     selectedColor: TColors.primary,
