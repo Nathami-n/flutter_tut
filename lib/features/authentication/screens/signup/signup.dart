@@ -50,24 +50,45 @@ class SignUpScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            const SizedBox(
-                              height: TSizes.spaceBtwInputFields,
-                            ),
-                            // username
-                            TextFormField(
-                              expands: false,
-                              decoration: const InputDecoration(
-                                  labelText: TTexts.username,
-                                  prefixIcon: Icon(Iconsax.user_edit)),
-                            )
                           ],
                         ),
-
-                        // username
+                        const SizedBox(
+                          height: TSizes.spaceBtwInputFields,
+                        ),
                         TextFormField(
                           decoration: const InputDecoration(
-                              labelText: TTexts.username,
-                              prefixIcon: Icon(Iconsax.user_edit)),
+                            labelText: TTexts.username,
+                            prefixIcon: Icon(Iconsax.user_edit),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: TSizes.spaceBtwInputFields,
+                        ),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: TTexts.email,
+                            prefixIcon: Icon(Iconsax.direct),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: TSizes.spaceBtwInputFields,
+                        ),
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            labelText: TTexts.phoneNo,
+                            prefixIcon: Icon(Iconsax.call),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: TSizes.spaceBtwInputFields,
+                        ),
+                        TextFormField(
+                          obscureText: true,
+                          decoration: const InputDecoration(
+                            suffixIcon: Icon(Iconsax.eye_slash),
+                            labelText: TTexts.password,
+                            prefixIcon: Icon(Iconsax.lock),
+                          ),
                         )
                       ],
                     ),
