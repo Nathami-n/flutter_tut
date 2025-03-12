@@ -1,7 +1,9 @@
+import 'package:e_commerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SignupForm extends StatelessWidget {
@@ -83,7 +85,7 @@ class SignupForm extends StatelessWidget {
           const SizedBox(
             height: TSizes.spaceBtwSections,
           ),
-    
+
           // terms and conditions
           Row(
             children: [
@@ -100,38 +102,30 @@ class SignupForm extends StatelessWidget {
                   children: [
                     TextSpan(
                         text: "${TTexts.iAgreeTo} ",
-                        style:
-                            Theme.of(context).textTheme.bodySmall),
+                        style: Theme.of(context).textTheme.bodySmall),
                     TextSpan(
                       text: "${TTexts.privacyPolicy} ",
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!
-                          .apply(
-                              color: dark
-                                  ? TColors.white
-                                  : TColors.primary),
+                          .apply(color: dark ? TColors.white : TColors.primary),
                     ),
                     TextSpan(
                         text: "${TTexts.and} ",
-                        style:
-                            Theme.of(context).textTheme.bodySmall),
+                        style: Theme.of(context).textTheme.bodySmall),
                     TextSpan(
                       text: TTexts.termsOfUse,
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!
-                          .apply(
-                              color: dark
-                                  ? TColors.white
-                                  : TColors.primary),
+                          .apply(color: dark ? TColors.white : TColors.primary),
                     ),
                   ],
                 ),
               )
             ],
           ),
-    
+
           const SizedBox(
             height: TSizes.spaceBtwItems,
           ),
@@ -139,7 +133,9 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => const VerifyEmail());
+              },
               child: const Text(TTexts.createAccount),
             ),
           )
