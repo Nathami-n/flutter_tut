@@ -1,7 +1,6 @@
-import 'package:e_commerce/common/widgets/common_shapes/containers/circular_container.dart';
-import 'package:e_commerce/common/widgets/common_shapes/curved_edges/curved_edges.dart';
+import 'package:e_commerce/common/widgets/common_shapes/containers/primary_header.dart';
 import 'package:e_commerce/common/widgets/common_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:e_commerce/utils/constants/colors.dart';
+import 'package:e_commerce/features/authentication/screens/home/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,35 +8,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             CurvedEdgesWidget(
-              child: Container(
-                color: TColors.primary,
-                padding: const EdgeInsets.all(0),
-                child: SizedBox(
-                  height: 400,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        top: -150,
-                        right: -250,
-                        child: CircularContainerBackground(
-                          backgroundColor: TColors.textWhite.withOpacity(0.1),
-                        ),
-                      ),
-                      Positioned(
-                        top: 100,
-                        right: -300,
-                        child: CircularContainerBackground(
-                          backgroundColor: TColors.textWhite.withOpacity(0.1),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              child: PrimaryHeaderContainer(
+                child: THomeAppBar(),
               ),
             ),
           ],
