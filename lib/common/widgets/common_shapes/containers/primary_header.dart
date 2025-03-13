@@ -1,9 +1,10 @@
 import 'package:e_commerce/common/widgets/common_shapes/containers/circular_container.dart';
+import 'package:e_commerce/features/authentication/screens/home/widgets/app_bar.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryHeaderContainer extends StatelessWidget {
-  const PrimaryHeaderContainer({
+  const PrimaryHeaderContainer(required THomeAppBar child, {
     super.key,
     required this.child,
   });
