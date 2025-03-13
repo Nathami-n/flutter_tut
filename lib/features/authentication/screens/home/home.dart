@@ -1,5 +1,6 @@
 import 'package:e_commerce/common/widgets/common_shapes/containers/circular_container.dart';
-import 'package:e_commerce/common/widgets/common_shapes/curved_edges/curved_ages.dart';
+import 'package:e_commerce/common/widgets/common_shapes/curved_edges/curved_edges.dart';
+import 'package:e_commerce/common/widgets/common_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ClipPath(
-              clipper: TCustomCurvedEdges(),
+            CurvedEdgesWidget(
               child: Container(
                 color: TColors.primary,
                 padding: const EdgeInsets.all(0),
